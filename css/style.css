@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+
+body {
+    background: linear-gradient(0deg, #ff1a6a 0%, #47cbff 90%) no-repeat; /* Testando o gradiente */
+    background-attachment: fixed;
+}
+
+div#tela-login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, .8);
+    padding: 90px;
+    border-radius: 15px;
+    align-items: center;
+}
+
+div#tela-login h1 {
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 3rem;
+    margin-top: 0px;
+}
+
+div#tela-login input {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin: 15px auto;
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+
+div#tela-login button {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: dodgerblue;
+}
+
+div#tela-login button:hover {
+    background-color: deepskyblue;
+    cursor: pointer;
+}
