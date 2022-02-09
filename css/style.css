@@ -29,14 +29,11 @@ body {
 }
 
 @keyframes fundo{
-    0%{
-        background-position: 25% 25%;
+    from{
+        background-position: 20% 20%;
     }
-    50%{
-        background-position: 50% 50%;
-    }
-    100%{
-        background-position: 75% 75%;
+    to{
+        background-position: 65% 65%;
     }
 }
 
@@ -54,7 +51,7 @@ body {
     border-left-color:#47cbff;
 
     /* Animações separadas por "," */
-    animation: spin 1s linear infinite, transition2 1s 9s both;
+    animation: spin 1s linear infinite, transition2 1s 5s both;
 }
 @keyframes spin {
     to{ transform: rotate(360deg);}
@@ -77,7 +74,7 @@ div#tela-login {
 
     /* Animação */
     opacity: 0;
-    animation: transition 1s 10s both;
+    animation: transition 1s 6s both;
 }
 @keyframes transition{
     to{opacity: 1;}
