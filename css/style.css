@@ -9,9 +9,13 @@ html{
 }
 
 body {
-    /* Formatação */
-    background: linear-gradient(0deg, #ff1a6a 0%, #47cbff 90%) no-repeat; /* Testando o gradiente */
+    /* Background */
+    background: linear-gradient(160deg,  #47cbff 0%, #ff1a6a 90%) no-repeat;
     background-attachment: fixed;
+    background-size: 200% 200%;
+
+    /* Animação do Fundo */
+    animation: fundo 5s ease-in-out alternate infinite;
 
     /* Dimensões */
     height: 100vh;
@@ -22,6 +26,18 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+@keyframes fundo{
+    0%{
+        background-position: 25% 25%;
+    }
+    50%{
+        background-position: 50% 50%;
+    }
+    100%{
+        background-position: 75% 75%;
+    }
 }
 
 #spinner {
