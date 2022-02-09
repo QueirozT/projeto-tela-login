@@ -1,20 +1,70 @@
 @charset "UTF-8";
 
 
-body {
-    background: linear-gradient(0deg, #ff1a6a 0%, #47cbff 90%) no-repeat; /* Testando o gradiente */
-    background-attachment: fixed;
+html{
+    /* Reset */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-div#tela-login {
+body {
+    /* Formatação */
+    background: linear-gradient(0deg, #ff1a6a 0%, #47cbff 90%) no-repeat; /* Testando o gradiente */
+    background-attachment: fixed;
+
+    /* Dimensões */
+    height: 100vh;
+    overflow: hidden;
+    
+    /* Alinhamento do conteúdo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#spinner {
+    /* Posição */
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+    /* Dimensões */
+    width: 60px;
+    height: 60px;
+
+    /* Formatação do container */
+    border: 8px solid rgba(0, 0, 0, .1);
+    border-radius: 50%;
+    border-left-color:#47cbff;
+
+    /* Animações separadas por "," */
+    animation: spin 1s linear infinite, transition2 1s 9s both;
+}
+@keyframes spin {
+    to{ transform: rotate(360deg);}
+}
+
+@keyframes transition2{
+    to{opacity: 0;}
+}
+
+
+div#tela-login {
+    /* Posição */
+    position: absolute;
+
+    /* Formatação do container */
     background-color: rgba(0, 0, 0, .8);
-    padding: 90px;
+    padding: 60px;
     border-radius: 15px;
     align-items: center;
+
+    /* Animação */
+    opacity: 0;
+    animation: transition 1s 10s both;
+}
+@keyframes transition{
+    to{opacity: 1;}
 }
 
 div#tela-login h1 {
